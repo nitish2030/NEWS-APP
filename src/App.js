@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
@@ -7,8 +6,6 @@ import LoadingBar from "react-top-loading-bar";
 
 function App() {
   const [progress, setProgress] = useState(0);
-
-  // Wrap setProgress with useCallback for optimization
   const handleSetProgress = useCallback((progressValue) => {
     setProgress(progressValue);
   }, []);
@@ -20,35 +17,35 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<News setProgress={handleSetProgress} country="us" category="general" />}
+          element={<News setProgress={handleSetProgress} country="in" category="general" />}
         />
         <Route
           path="/general"
-          element={<News setProgress={handleSetProgress} country="us" category="general" />}
+          element={<News setProgress={handleSetProgress} country="in" category="general" />}
         />
         <Route
           path="/business"
-          element={<News setProgress={handleSetProgress} country="us" category="business" />}
+          element={<News setProgress={handleSetProgress} country="in" category="business" />}
         />
         <Route
           path="/entertainment"
-          element={<News setProgress={handleSetProgress} country="us" category="entertainment" />}
+          element={<News setProgress={handleSetProgress} country="in" category="entertainment" />}
         />
         <Route
           path="/health"
-          element={<News setProgress={handleSetProgress} country="us" category="health" />}
+          element={<News setProgress={handleSetProgress} country="in" category="health" />}
         />
         <Route
           path="/science"
-          element={<News setProgress={handleSetProgress} country="us" category="science" />}
+          element={<News setProgress={handleSetProgress} country="in" category="science" />}
         />
         <Route
           path="/sports"
-          element={<News setProgress={handleSetProgress} country="us" category="sports" />}
+          element={<News setProgress={handleSetProgress} country="in" category="sports" />}
         />
         <Route
           path="/technology"
-          element={<News setProgress={handleSetProgress} country="us" category="technology" />}
+          element={<News setProgress={handleSetProgress} country="in" category="technology" />}
         />
       </Routes>
     </BrowserRouter>
