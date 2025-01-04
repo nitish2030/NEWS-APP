@@ -26,7 +26,7 @@ const NewsItem = ({ title, description, imageUrl, newsUrl, author, date, source 
           <p className="card-text">{description}</p>
           <p className="card-text">
             <small style={{ color: "green" }}>
-              By {author || "Unknown"} on {new Date(date).toGMTString()}
+              {new Date(date).toGMTString()}
             </small>
           </p>
           <a href={newsUrl} target="_blank" rel="noreferrer" className="btn btn-dark btn-sm">
